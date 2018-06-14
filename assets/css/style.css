@@ -3,7 +3,7 @@
 }
 
 body {
-    padding: 80px;
+    padding: 60px 80px 80px 80px;
     margin: 0;
     background-image: url("../images/newsprintBG2.png");
     background-size: 100%;
@@ -149,9 +149,9 @@ select {
 
 .infoRow button {
     line-height: 200%;
-    padding: 5px;
+    padding: 7px;
     color: #b3b3b3;
-    font-size: 11pt;
+    font-size: 10pt;
     border: none;
 }
 
