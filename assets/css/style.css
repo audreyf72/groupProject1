@@ -21,6 +21,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 2;
     cursor: pointer;
+    box-shadow: 0px 6px 12px #7d7d7d;
 }
 
 #overlay1Text{
@@ -46,6 +47,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 2;
     cursor: pointer;
+    box-shadow: 0px 6px 12px #7d7d7d;
 }
 
 #overlay2Text{
@@ -64,7 +66,7 @@ body {
 
 #overlay1Text h3{
     width: 100%;
-    border-bottom: #858585 1px solid;
+    border-bottom: red 1px solid;
     font-weight: bold;
     font-size: 26pt;
     padding-bottom: 10px;
@@ -73,7 +75,7 @@ body {
 
 #overlay2Text h3{
     width: 100%;
-    border-bottom: #858585 1px solid;
+    border-bottom: red 1px solid;
     font-weight: bold;
     font-size: 26pt;
     padding-bottom: 10px;
