@@ -16,6 +16,32 @@
 </head>
 
 <body onload="getLocation()">
+
+    <div id="overlay1" onclick="off1()">
+        <div id="overlay1Text">
+            <h3>about figgit</h3>
+            The Figgit app is an online search tool that provides background information on news 
+            articles and their sources. A simple keyword search returns relevant news articles based on your location and the keyword entered in the search bar. The 
+            results will provide source information for each article along with a media bias rating scale.<br><br>
+
+            The purpose of the bias rating is not to tell you whether a story is accurate, but to provide you with information pertaining to 
+            who published the story while also providing additional stories on the same subject from an alternate new source. We encourages you to view information 
+            from different perspectives, observe different view-points and, ultimately, be better informed.</div>
+    </div>
+    <div style="padding:20px"></div>
+
+    <div id="overlay2" onclick="off2()">
+        <div id="overlay2Text">
+            <h3>how to use figgit</h3>
+            Enter a keyword or phrase in the search box to find new articles relevent to your search. The date of article is not necesssary but will help narrow down the search results to a particular time period.
+            Click the search button to see your search results. If no results are returned, try simplifying your search or check the spelling of your keyword.<br><br>
+
+            Each search result contains the source information and a Bias Rating scale. The Bias Rating illustrates the media bias commonly associated with that particular news source. 
+            The rating is defined by a row of boxes, with the red box depicting views from left to right, the far left being the extreme left or liberal view and the far right being 
+            the extreme right or conservative view. The ratings are based on data researched from various sources like Market Watch, Business Insider and AllSides.com.</div>
+    </div>
+    <div style="padding:20px"></div>
+
     <div id="myModal" class="modal">
 
                 <!-- Modal content -->
@@ -26,6 +52,15 @@
               
               </div>
     <div class="flex-container">
+
+        <div class="infoRow">
+            <span><button onclick="on1()">about figgit</button></span>
+            
+            <span><button onclick="on2()">how to use</button></span>
+           
+            <span><button onclick="on3()">contact figgit</button></span>
+        </div>
+
     <div class="container">
         <div class="logoDiv"><img src="assets/images/figgit_logo-01.png" alt="logo" class="responsive"></div>
 
@@ -67,7 +102,6 @@
             </form>
             
     </div>
-    
     
     <div id="resultsRow">
             
