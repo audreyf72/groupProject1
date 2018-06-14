@@ -68,6 +68,7 @@ function getData() {
         var sortBy = "relevancy";
         var apiKey = "850d4c0cc9124a158a98cfda121f721d";
         var language;
+        var pagesize = 100;
 
         if (countryCode === "US"){
             language = 'en';
@@ -80,7 +81,7 @@ function getData() {
         console.log(from);
 
 //Sets parameters for data reponse
-        var queryURL = url + "q="+q+"&sources="+sources+"&from="+from+"&sortBy="+sortBy+"&language="+language+"&apiKey="+apiKey;
+        var queryURL = url + "q="+q+"&sources="+sources+"&from="+from+"&sortBy="+sortBy+"&pageSize="+pagesize+"&language="+language+"&apiKey="+apiKey;
         console.log(queryURL);
         if (q === "") {
             $("#resultsRow").hide();
@@ -119,22 +120,23 @@ function getData() {
             console.log(imageL);
 
             if (response.totalResults === 0) { // Return No Results
-                $("#resultsView").append($("<a>").text("No results. Please try your search again."));
-                 $("#searchResult").html("Your Keyword Search: "+ q);
+                $("#resultsView").append($("<a>").html("<p align='center'>" + "Sorry no results. Please try your search again." + "</p>"));
+                 $("#searchResult").text("Your Keyword Search: "+ q);
                  $("#dateResult").html("Selected Date: " + moment(from).format("MMMM DD, YYYY"));
+                 $("#moreResults").hide();
             }
 
             //Create for loop and variables for response data
-            for (i = 0; i < response.articles.length; i++) {
+            for (i = 0; i < 30; i++) {
                 var artTitle = $("<h2>").text("Headline: " + response.articles[i].title);
                 var artUrl = response.articles[i].url;
                 var artAuthor = response.articles[i].author;
                 var artSource = response.articles[i].source.name;
-                var artDate = response.articles[i].publishedAt;
+                var artDate = response.articles[i].publishedAt;    
 
             //Create class attributes for response data
                 var divA = $("<a>");
-                divA.attr("href", response.articles[i].url);
+                divA.attr("href", artUrl);
                 divA.attr("target", "_blank");
                 divA.addClass("myTitle");
 
@@ -185,7 +187,7 @@ function getData() {
                 
 
                 $("#resultsView").append(divA); // display results to html
-                $("#searchResult").html("Your Keyword Search: "+ q);
+                $("#searchResult").text("Your Keyword Search: "+ q);
 
             }
 

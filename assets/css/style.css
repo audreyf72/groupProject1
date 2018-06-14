@@ -298,6 +298,13 @@ h2 {
     cursor: pointer;
 }
 
+#moreResults {
+    text-align: center;
+    font-size: 12pt;
+    color: #858585;
+    padding-top: 20px;
+}
+
 
 @media screen and (max-width: 640px){
     body {
