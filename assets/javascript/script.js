@@ -38,7 +38,7 @@ $.ajax({
     $("#location").text("Current location: "+response.results[0].address_components[2].short_name);
 
 });
- 
+
 }
 
 //on.document function

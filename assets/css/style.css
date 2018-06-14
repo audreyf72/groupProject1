@@ -5,7 +5,7 @@
 body {
     padding: 80px;
     margin: 0;
-    background-image: url("../images/newsprintBG.png");
+    background-image: url("../images/newsprintBG2.png");
     background-size: 100%;
     background-repeat: repeat-y;
     font-family: 'Slabo 27px', serif;
@@ -14,9 +14,9 @@ body {
 
 .flex-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: auto;
+    min-height: 650px;
     background-color: white;
     box-shadow: 0px 6px 12px #7d7d7d;
 }
@@ -42,6 +42,7 @@ body {
     text-align: left;
     font-size: 10pt;
     margin-top: 3px;
+    margin-bottom: 30px;
     width: 100%;
     max-width: 900px;
     margin-left: auto;
@@ -66,21 +67,15 @@ select {
     background-position-y: 11px;
 }
 
-.resultsContainer{
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 6px 12px #7d7d7d;
-}
+
 
 .container{
-    padding: 60px;
+    padding: 120px 60px 10px 60px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+#resultsRow {
+    width: 100%;
 }
 
 .responsive{
@@ -176,7 +171,7 @@ label{
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 30px;
 }
 
@@ -193,12 +188,14 @@ padding-top: 35px;
     line-height: 175%;
     float: left;
     text-transform: capitalize;
+    color: #858585;
 }
 
 #dateResult {
     line-height: 175%;
     float: right;
     margin-right: 10px;
+    color: #858585;
 }
 
 .byDiv {
@@ -213,19 +210,18 @@ padding-top: 35px;
 }
 
 .myTitle {
-    background-color: whitesmoke;
-    color: gray;
-    margin: 10px 0px;
-    border-radius: 4px 0px;
+    background-color: white;
+    color: #858585;
+    margin: 10px 10px 20px 10px;
     padding: 10px;
-    box-shadow: 0px 2px 6px #a2a2a2;
+    border-bottom: red 1px solid;
 }
 
 a {
     display: block;
     font-size: 18px;
     text-decoration: none;
-    color: gray;
+    color: #858585;
 }
 
 h2 {
@@ -233,20 +229,19 @@ h2 {
 }
 
 .myTitle:hover {
-    background-color: silver;
+    background-color: rgb(244, 244, 244);
 }
 
 .resultsHeader {
-    display: block;
     font-size: 18pt;
-    margin-top: 30px;
+    margin-top: -1px;
+    margin-bottom: 10px;
     line-height: 200%;
+    border-bottom: red 1px solid;
     width: 100%;
-    background-color: red;
-    color: white;
-    padding: 10px 30px 7px 30px;
-    border-radius: 4px 4px 0px 0px;
-    box-shadow: 0px 6px 12px #7d7d7d;
+    color: #858585;
+    padding: 5px 30px 5px 0px;
+    
 }
 
 /* The Modal (background) */
